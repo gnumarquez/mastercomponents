@@ -1,0 +1,28 @@
+{
+    "name": "gnumarquez/mastercomponents",
+    "description": "Components personal use for make life easy",
+    "type": "library",
+    "require": {
+        "livewire/livewire": "^2.10",
+        "pusher/pusher-php-server": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gnumarquez\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gnumarquez\\MastercomponentsServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Wilmer Márquez",
+            "email": "gnumarquez@gmail.com"
+        }
+    ]
+}
