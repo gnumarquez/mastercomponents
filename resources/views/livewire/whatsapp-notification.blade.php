@@ -8,7 +8,7 @@
 				<div class="dropdown-menu-header">
 					{{$quantity}} {{$quantity == 1 ? 'Mensaje nuevo':'Mensajes nuevos'}}
 				</div>
-				<div class="list-group" style="overflow-y: scroll;height: 400px;">
+				<div class="list-group" style="overflow-y: scroll;max-height: 400px;">
 					@foreach($notifications as $item)
 					<a href="/clients/{{$item->c_id}}/edit" class="list-group-item">
 						<div class="row no-gutters align-items-center">
