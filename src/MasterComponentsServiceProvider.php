@@ -4,7 +4,7 @@ namespace Gnumarquez;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use Gnumarquez\MasterComponents\livewire\WhatsappNotification;
+use Gnumarquez\Http\Livewire\WhatsappNotification;
 
 
 class MasterComponentsServiceProvider extends ServiceProvider
@@ -26,8 +26,7 @@ class MasterComponentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //$this->registerCommands();
-        //$this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views','mastercomponents'); 
         Livewire::component('whatsapp-notification', WhatsappNotification::class);
     }
 
