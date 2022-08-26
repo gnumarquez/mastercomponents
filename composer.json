@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gnumarquez\\MastercomponentsServiceProvider"
+                "Gnumarquez\\MasterComponentsServiceProvider"
             ]
         }
     },
