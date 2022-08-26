@@ -14,7 +14,7 @@ class WhatsappNotification extends Component
 
     public function render()
     {
-        $this->notifications = WhatsappModel::select('whatsapp.*','c.id as c_id','c.nombre')->join('clients as c','c.whatsapp','whatsapp.telf')->whereReaded(0)->whereStatus(1)->orderBy('id','desc')->limit(10)->get();
+        $this->notifications = WhatsappModel::select('whatsapp.*','c.id as c_id','c.nombre')->join('clients as c','c.whatsapp','whatsapp.telf')->whereReaded(0)->whereStatus(1)->orderBy('id','desc')->get();
         $this->quantity = WhatsappModel::select('whatsapp.*','c.id as c_id','c.nombre')->join('clients as c','c.whatsapp','whatsapp.telf')->whereReaded(0)->whereStatus(1)->count();
 
         return view("mastercomponents::livewire.whatsapp-notification");
