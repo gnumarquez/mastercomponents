@@ -3,7 +3,7 @@
 namespace Gnumarquez\Http\Livewire;
 
 use Livewire\Component;
-use Gnumarquez\Models\User;
+use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
