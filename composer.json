@@ -4,7 +4,8 @@
     "type": "library",
     "require": {
         "livewire/livewire": "^2.10",
-        "pusher/pusher-php-server": "^7.0"
+        "pusher/pusher-php-server": "^7.0",
+        "spatie/laravel-permission": "^5.5"
     },
     "license": "MIT",
     "autoload": {
