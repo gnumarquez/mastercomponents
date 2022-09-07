@@ -10,7 +10,7 @@
 				<h5 class="card-title">Cantidad de clientes: {{$quantity}}</h5>
 			</div>
 			<div class="card-body">
-		<button class="btn btn-success m-3" @click="addUser">Nuevo usuario</button>
+		<button class="btn btn-success m-3" x-on:click="addUser">Nuevo usuario</button>
 		
 			<table class="table table-striped" id="tabla">
 				<thead>
@@ -27,8 +27,8 @@
 						<td class="">{{$item->name}}</td>
 						<td class="">{{$item->email}}</td>
 						<td class="">{{$item->getRoleNames()[0] ?? ""}}</td>
-						<td><button class="btn btn-primary" @click="editUser({{$item->id}})" title="Editar"><i class="fas fa-fw fa-edit"></i></button>
-            			<button class="btn btn-danger" @click="delUser({{$item->id}})" title="Eliminar"><i class="fas fa-fw fa-trash"></i></button></td>
+						<td><button class="btn btn-primary" x-on:click="editUser({{$item->id}})" title="Editar"><i class="fas fa-fw fa-edit"></i></button>
+            			<button class="btn btn-danger" x-on:click="delUser({{$item->id}})" title="Eliminar"><i class="fas fa-fw fa-trash"></i></button></td>
 					</tr>
 					@endforeach
 
@@ -45,7 +45,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel" x-text="editMode ? 'Editar usuario':'Agregar usuario'"></h5>
-        <button type="button" class="close" @click="closeModal" aria-label="Close">
+        <button type="button" class="close" x-on:click="closeModal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -88,8 +88,8 @@
 		</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" @click="closeModal">Cancelar</button>
-        <button type="button" class="btn btn-primary" @click="saveUser" x-text="editMode ? 'Actualizar':'Guardar'"></button>
+        <button type="button" class="btn btn-secondary" x-on:click="closeModal">Cancelar</button>
+        <button type="button" class="btn btn-primary" x-on:click="saveUser" x-text="editMode ? 'Actualizar':'Guardar'"></button>
       </div>
     </div>
   </div>
